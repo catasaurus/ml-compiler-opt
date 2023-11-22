@@ -101,7 +101,7 @@ def train_eval(worker_manager_class=LocalWorkerPoolManager,
       'saved_policy': agent.policy,
       'saved_collect_policy': agent.collect_policy,
   }
-  saver = policy_saver.PolicySaver(policy_dict=policy_dict)
+  saver = policy_saver.MLGOPolicySaver(policy_dict=policy_dict)
 
   logging.info('Loading module specs from corpus at %s.', FLAGS.data_path)
   cps = corpus.Corpus(

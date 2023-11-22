@@ -81,7 +81,7 @@ def train(additional_compilation_flags=(),
 
   # Construct the policy and upload it
   policy = policy_utils.create_actor_policy(greedy=_GREEDY.value)
-  saver = policy_saver.PolicySaver({POLICY_NAME: policy})
+  saver = policy_saver.MLGOPolicySaver({POLICY_NAME: policy})
 
   # Save the policy
   policy_save_path = os.path.join(_OUTPUT_PATH.value, "policy")

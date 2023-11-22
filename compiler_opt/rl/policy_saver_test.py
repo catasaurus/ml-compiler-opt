@@ -103,7 +103,7 @@ class PolicySaverTest(tf.test.TestCase):
         'saved_policy': test_agent.policy,
         'saved_collect_policy': test_agent.collect_policy
     }
-    test_policy_saver = policy_saver.PolicySaver(policy_dict=policy_dict)
+    test_policy_saver = policy_saver.MLGOPolicySaver(policy_dict=policy_dict)
 
     root_dir = self.get_temp_dir()
     test_policy_saver.save(root_dir)
