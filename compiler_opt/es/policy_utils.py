@@ -112,5 +112,5 @@ def save_policy(policy: 'tf_policy.TFPolicy | HasModelVariables',
   and saves it to the directory of save_folder
   with the values in parameters."""
   set_vectorized_parameters_for_policy(policy, parameters)
-  saver = policy_saver.PolicySaver({policy_name: policy})
+  saver = policy_saver.MLGOPolicySaver({policy_name: policy})
   saver.save(save_folder)
